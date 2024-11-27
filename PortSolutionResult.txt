@@ -1,0 +1,120 @@
+==========
+References
+==========
+DriftRefactoringApp
+System.Web.Optimization
+System.Web.Mvc
+System.Web.Routing
+DriftRefactoringApp.Controllers
+SimpleDepProj
+DriftRefactoringApp.Utils
+System
+DriftRefactoringApp.Models
+System.Web
+System.ComponentModel.DataAnnotations
+System.Configuration
+System.Data.SqlClient
+System.Web.Configuration
+ClassLibraryOutsideSln
+System.Linq
+System.Reflection
+System.Runtime.CompilerServices
+System.Runtime.InteropServices
+project.all
+System.Collections.Generic
+System.Text
+System.Threading.Tasks
+
+===============
+DownloadedFiles
+===============
+system.data.sqlclient.json
+system.web.json
+system.web.configuration.json
+system.web.mvc.json
+project.all.json
+system.configuration.json
+
+==============
+ProjectResults
+==============
+----------------------
+Showing results for: C:\Users\rtjia\TestApps\DriftRefactoringApp\SimpleDepProj\SimpleDepProj.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: C:\Users\rtjia\TestApps\DriftRefactoringApp\DriftRefactoringApp\DriftRefactoringApp.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+Microsoft.Data.SqlClient,5.0.1
+
+----------------------
+Showing results for: C:\Users\rtjia\TestApps\DriftRefactoringApp\SimpleDepProj\SimpleDepProj.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+
+----------------------
+Showing results for: C:\Users\rtjia\TestApps\DriftRefactoringApp\DriftRefactoringApp\DriftRefactoringApp.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net6.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+---------------------------
+Action packages:
+---------------------------
+Microsoft.Data.SqlClient,5.0.1
+
+
+===========
+BuildErrors
+===========
+
+
