@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "tk9GTU8jT8c=",
+  "dgSpecHash": "o3Bmbbqna/A=",
   "success": true,
   "projectFilePath": "/tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/DriftRefactoringApp/DriftRefactoringApp.csproj",
   "expectedPackageFiles": [
@@ -17,6 +17,7 @@
     "/tmp/tempfspartition/QnetTransformArtifacts/packages/microsoft.data.sqlclient.sni.runtime/5.2.0/microsoft.data.sqlclient.sni.runtime.5.2.0.nupkg.sha512",
     "/tmp/tempfspartition/QnetTransformArtifacts/packages/microsoft.extensions.configuration/8.0.0/microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "/tmp/tempfspartition/QnetTransformArtifacts/packages/microsoft.extensions.configuration.abstractions/8.0.0/microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+    "/tmp/tempfspartition/QnetTransformArtifacts/packages/microsoft.extensions.configuration.binder/8.0.0/microsoft.extensions.configuration.binder.8.0.0.nupkg.sha512",
     "/tmp/tempfspartition/QnetTransformArtifacts/packages/microsoft.extensions.configuration.fileextensions/8.0.0/microsoft.extensions.configuration.fileextensions.8.0.0.nupkg.sha512",
     "/tmp/tempfspartition/QnetTransformArtifacts/packages/microsoft.extensions.configuration.json/8.0.0/microsoft.extensions.configuration.json.8.0.0.nupkg.sha512",
     "/tmp/tempfspartition/QnetTransformArtifacts/packages/microsoft.extensions.fileproviders.abstractions/8.0.0/microsoft.extensions.fileproviders.abstractions.8.0.0.nupkg.sha512",

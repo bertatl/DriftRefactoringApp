@@ -1,16 +1,18 @@
-﻿using System;
+using System;
 using System.Linq;
-using System.Web.Configuration;
+using Microsoft.Extensions.Configuration;
 
 namespace DriftRefactoringApp.Utils
 {
     public class StringUtils
     {
         private readonly Random random;
+        private readonly IConfiguration configuration;
 
-        public StringUtils()
+        public StringUtils(IConfiguration configuration)
         {
             this.random = new Random();
+            this.configuration = configuration;
         }
 
         public string ReverseString(string input)
@@ -23,7 +25,7 @@ namespace DriftRefactoringApp.Utils
 
         public string RandomString(int length)
         {
-            string confString = WebConfigurationManager.AppSettings["nestedWebConfKey"];
+            string confString = configuration.GetValue<string>("nestedWebConfKey");
             int depInt = new SimpleDepProj.DepClass().UsefulMethod();
             string depString = "Here is some util method goodness: "
                                + SimpleDepProj.UtilClass.UtilMethod()
