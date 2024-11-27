@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DriftRefactoringApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c7189adf7c9c467363610898407d6607c31af986")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8b3134ede72d17818bfbae9d7676da1dd0580a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("DriftRefactoringApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DriftRefactoringApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
