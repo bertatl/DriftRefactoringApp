@@ -4,6 +4,7 @@ using DriftRefactoringApp.Models;
 using SimpleDepProj;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Http;
 
 namespace DriftRefactoringApp.Controllers
 {
@@ -12,10 +13,12 @@ namespace DriftRefactoringApp.Controllers
         private static readonly int charLimit = 8;
         private static readonly int seed = 100;
         private readonly IConfiguration _configuration;
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public HomeController(IConfiguration configuration)
+        public HomeController(IConfiguration configuration, IHttpContextAccessor httpContextAccessor)
         {
             _configuration = configuration;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         public ActionResult Index()
@@ -83,7 +86,7 @@ namespace DriftRefactoringApp.Controllers
         public ActionResult GetRandomPerson()
         {
             TempData["name"] = "Bill";
-            Session["City"] = "city";
+            _httpContextAccessor.HttpContext.Session.SetString("City", "city");
             // First get the Last PersonId
             DBConnector myConnector = new DBConnector(_configuration);
             int lastPersonId = myConnector.GetPersonCount();
