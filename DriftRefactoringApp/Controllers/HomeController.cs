@@ -1,8 +1,9 @@
 using System;
-using System.Web.Mvc;
 using DriftRefactoringApp.Utils;
 using DriftRefactoringApp.Models;
 using SimpleDepProj;
+using Microsoft.AspNetCore.Mvc;
+
 
 namespace DriftRefactoringApp.Controllers
 {

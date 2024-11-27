@@ -5,6 +5,7 @@ DriftRefactoringApp
 System.Web.Optimization
 System.Web.Mvc
 System.Web.Routing
+<global namespace>
 DriftRefactoringApp.Controllers
 SimpleDepProj
 DriftRefactoringApp.Utils
@@ -12,14 +13,14 @@ System
 DriftRefactoringApp.Models
 System.Web
 System.ComponentModel.DataAnnotations
+System.Reflection
+System.Runtime.InteropServices
 System.Configuration
 System.Data.SqlClient
 System.Web.Configuration
 ClassLibraryOutsideSln
 System.Linq
-System.Reflection
 System.Runtime.CompilerServices
-System.Runtime.InteropServices
 project.all
 System.Collections.Generic
 System.Text
@@ -28,23 +29,24 @@ System.Threading.Tasks
 ===============
 DownloadedFiles
 ===============
-system.data.sqlclient.json
-system.web.json
-system.web.configuration.json
-system.web.mvc.json
 project.all.json
+system.web.configuration.json
+system.data.sqlclient.json
 system.configuration.json
+system.web.json
+system.web.routing.json
+system.web.mvc.json
 
 ==============
 ProjectResults
 ==============
 ----------------------
-Showing results for: C:\Users\rtjia\TestApps\DriftRefactoringApp\SimpleDepProj\SimpleDepProj.csproj
+Showing results for: /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/SimpleDepProj/SimpleDepProj.csproj
 ----------------------
 ---------------------------
 Target Versions:
 ---------------------------
-net6.0
+net8.0
 ---------------------------
 Source Versions:
 ---------------------------
@@ -54,34 +56,33 @@ Upgrade packages:
 ---------------------------
 ---------------------------
 Action packages:
+---------------------------
+---------------------------
+Executed Actions for file: Project
 ---------------------------
 
-----------------------
-Showing results for: C:\Users\rtjia\TestApps\DriftRefactoringApp\DriftRefactoringApp\DriftRefactoringApp.csproj
-----------------------
----------------------------
-Target Versions:
----------------------------
-net6.0
----------------------------
-Source Versions:
----------------------------
-net48
----------------------------
-Upgrade packages:
----------------------------
----------------------------
-Action packages:
----------------------------
-Microsoft.Data.SqlClient,5.0.1
+Action Type: Project
+Action Name: ArchiveFiles
+Action Value: BundleConfig.cs,FilterConfig.cs,RouteConfig.cs,WebApiConfig.cs,global.asax.cs,global.asax,AssemblyInfo.cs,packages.config
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: ProjectFile
+Action Name: MigrateProjectFile
+Action Value: 
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
 
 ----------------------
-Showing results for: C:\Users\rtjia\TestApps\DriftRefactoringApp\SimpleDepProj\SimpleDepProj.csproj
+Showing results for: /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/DriftRefactoringApp/DriftRefactoringApp.csproj
 ----------------------
 ---------------------------
 Target Versions:
 ---------------------------
-net6.0
+net8.0
 ---------------------------
 Source Versions:
 ---------------------------
@@ -89,17 +90,240 @@ net48
 ---------------------------
 Upgrade packages:
 ---------------------------
+Modernizr,->2.8.3
+bootstrap,->5.3.1
+Microsoft.AspNet.WebApi.Client,->6.0.0
+jQuery.Validation,->1.19.5
+jQuery,->3.7.0
+Newtonsoft.Json,->13.0.3
+Microsoft.jQuery.Unobtrusive.Validation,->4.0.0
 ---------------------------
 Action packages:
+---------------------------
+Microsoft.AspNetCore.SystemWebAdapters,1.4.0
+System.Configuration.ConfigurationManager,*
+Microsoft.Data.SqlClient,5.2.0
+---------------------------
+Executed Actions for file: /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/DriftRefactoringApp/Utils/DBConnector.cs
 ---------------------------
 
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.Data.SqlClient
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Data.SqlClient
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+---------------------------
+Executed Actions for file: /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/DriftRefactoringApp/Global.asax.cs
+---------------------------
+
+Action Type: Class
+Action Name: RemoveBaseClass
+Action Value: IHttpHandler
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Class
+Action Name: AddExpression
+Action Value: RequestDelegate_next=null;
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Class
+Action Name: CreateConstructor
+Action Value: {"types":"RequestDelegate","identifiers":"next"}
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Class
+Action Name: ChangeMethodName
+Action Value: {"existingMethodName":"ProcessRequest","newMethodName":"Invoke"}
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 1
+
+Action Type: Class
+Action Name: ReplaceMethodModifiers
+Action Value: {"methodName":"Invoke","modifiers":"publicasync"}
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 1
+
+Action Type: Class
+Action Name: ChangeMethodToReturnTaskType
+Action Value: Invoke
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.AspNetCore.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Web.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.AspNetCore.Routing
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Web.Routing
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Web
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.AspNetCore.Http
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: System.Threading.Tasks
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+---------------------------
+Executed Actions for file: Project
+---------------------------
+
+Action Type: Project
+Action Name: ArchiveFiles
+Action Value: BundleConfig.cs,FilterConfig.cs,RouteConfig.cs,WebApiConfig.cs,global.asax.cs,global.asax,AssemblyInfo.cs,packages.config
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Project
+Action Name: CreateNet8FolderHierarchy
+Action Value: 
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Project
+Action Name: MigrateConfig
+Action Value: 
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: ProjectFile
+Action Name: MigrateProjectFile
+Action Value: 
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+---------------------------
+Executed Actions for file: /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/DriftRefactoringApp/Controllers/HomeController.cs
+---------------------------
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.AspNetCore.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Web.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+---------------------------
+Executed Actions for file: /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/DriftRefactoringApp/App_Start/FilterConfig.cs
+---------------------------
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.AspNetCore.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Web.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+---------------------------
+Executed Actions for file: /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/DriftRefactoringApp/App_Start/RouteConfig.cs
+---------------------------
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.AspNetCore.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Web.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.AspNetCore.Routing
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Web.Routing
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+
 ----------------------
-Showing results for: C:\Users\rtjia\TestApps\DriftRefactoringApp\DriftRefactoringApp\DriftRefactoringApp.csproj
+Showing results for: /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/SimpleDepProj/SimpleDepProj.csproj
 ----------------------
 ---------------------------
 Target Versions:
 ---------------------------
-net6.0
+net8.0
 ---------------------------
 Source Versions:
 ---------------------------
@@ -110,7 +334,265 @@ Upgrade packages:
 ---------------------------
 Action packages:
 ---------------------------
-Microsoft.Data.SqlClient,5.0.1
+---------------------------
+Executed Actions for file: Project
+---------------------------
+
+Action Type: Project
+Action Name: ArchiveFiles
+Action Value: BundleConfig.cs,FilterConfig.cs,RouteConfig.cs,WebApiConfig.cs,global.asax.cs,global.asax,AssemblyInfo.cs,packages.config
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: ProjectFile
+Action Name: MigrateProjectFile
+Action Value: 
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+
+----------------------
+Showing results for: /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/DriftRefactoringApp/DriftRefactoringApp.csproj
+----------------------
+---------------------------
+Target Versions:
+---------------------------
+net8.0
+---------------------------
+Source Versions:
+---------------------------
+net48
+---------------------------
+Upgrade packages:
+---------------------------
+Modernizr,->2.8.3
+bootstrap,->5.3.1
+Microsoft.AspNet.WebApi.Client,->6.0.0
+jQuery.Validation,->1.19.5
+jQuery,->3.7.0
+Newtonsoft.Json,->13.0.3
+Microsoft.jQuery.Unobtrusive.Validation,->4.0.0
+---------------------------
+Action packages:
+---------------------------
+Microsoft.AspNetCore.SystemWebAdapters,1.4.0
+System.Configuration.ConfigurationManager,*
+Microsoft.Data.SqlClient,5.2.0
+---------------------------
+Executed Actions for file: /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/DriftRefactoringApp/Utils/DBConnector.cs
+---------------------------
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.Data.SqlClient
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Data.SqlClient
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+---------------------------
+Executed Actions for file: /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/DriftRefactoringApp/Global.asax.cs
+---------------------------
+
+Action Type: Class
+Action Name: RemoveBaseClass
+Action Value: IHttpHandler
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Class
+Action Name: AddExpression
+Action Value: RequestDelegate_next=null;
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Class
+Action Name: CreateConstructor
+Action Value: {"types":"RequestDelegate","identifiers":"next"}
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Class
+Action Name: ChangeMethodName
+Action Value: {"existingMethodName":"ProcessRequest","newMethodName":"Invoke"}
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 1
+
+Action Type: Class
+Action Name: ReplaceMethodModifiers
+Action Value: {"methodName":"Invoke","modifiers":"publicasync"}
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 1
+
+Action Type: Class
+Action Name: ChangeMethodToReturnTaskType
+Action Value: Invoke
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.AspNetCore.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Web.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.AspNetCore.Routing
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Web.Routing
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Web
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.AspNetCore.Http
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: System.Threading.Tasks
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+---------------------------
+Executed Actions for file: Project
+---------------------------
+
+Action Type: Project
+Action Name: ArchiveFiles
+Action Value: BundleConfig.cs,FilterConfig.cs,RouteConfig.cs,WebApiConfig.cs,global.asax.cs,global.asax,AssemblyInfo.cs,packages.config
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Project
+Action Name: CreateNet8FolderHierarchy
+Action Value: 
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Project
+Action Name: MigrateConfig
+Action Value: 
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: ProjectFile
+Action Name: MigrateProjectFile
+Action Value: 
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+---------------------------
+Executed Actions for file: /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/DriftRefactoringApp/Controllers/HomeController.cs
+---------------------------
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.AspNetCore.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Web.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+---------------------------
+Executed Actions for file: /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/DriftRefactoringApp/App_Start/FilterConfig.cs
+---------------------------
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.AspNetCore.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Web.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+---------------------------
+Executed Actions for file: /tmp/tempfspartition/QnetTransformArtifacts/MidTransformCode/sourceCode/DriftRefactoringApp/App_Start/RouteConfig.cs
+---------------------------
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.AspNetCore.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Web.Mvc
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: AddDirective
+Action Value: Microsoft.AspNetCore.Routing
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
+Action Type: Using
+Action Name: RemoveDirective
+Action Value: System.Web.Routing
+Times Run: 1
+Executions With Error: 0
+Invalid Executions: 0
+
 
 
 ===========

@@ -1,13 +1,19 @@
 using System;
-using System.Configuration;
-using System.Data.SqlClient;
 using DriftRefactoringApp.Models;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+
 
 namespace DriftRefactoringApp.Utils
 {
     public class DBConnector
     {
-        private static string connStr = ConfigurationManager.ConnectionStrings["PersonDBConnectionString"].ConnectionString;
+        private readonly string connStr;
+
+        public DBConnector(IConfiguration configuration)
+        {
+            connStr = configuration.GetConnectionString("PersonDBConnectionString");
+        }
         private Person createPerson(int personId, string personName, string personHandle)
         {
             Person myPerson = new Person();
@@ -19,6 +25,11 @@ namespace DriftRefactoringApp.Utils
 
         public int GetPersonCount()
         {
+            if (string.IsNullOrEmpty(connStr))
+            {
+                throw new InvalidOperationException("Connection string is not set.");
+            }
+
             try
             {
                 SqlConnection conn = new SqlConnection(connStr);
@@ -40,6 +51,11 @@ namespace DriftRefactoringApp.Utils
 
         public Person GetPerson(int personId)
         {
+            if (string.IsNullOrEmpty(connStr))
+            {
+                throw new InvalidOperationException("Connection string is not set.");
+            }
+
             try
             {
                 SqlConnection conn = new SqlConnection(connStr);
@@ -67,6 +83,11 @@ namespace DriftRefactoringApp.Utils
 
         public bool AddPerson(Person person)
         {
+            if (string.IsNullOrEmpty(connStr))
+            {
+                throw new InvalidOperationException("Connection string is not set.");
+            }
+
             try
             {
                 SqlConnection conn = new SqlConnection(connStr);
