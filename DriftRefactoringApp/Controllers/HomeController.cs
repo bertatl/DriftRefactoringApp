@@ -3,6 +3,7 @@ using DriftRefactoringApp.Utils;
 using DriftRefactoringApp.Models;
 using SimpleDepProj;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 
 
 namespace DriftRefactoringApp.Controllers
@@ -11,6 +12,13 @@ namespace DriftRefactoringApp.Controllers
     {
         private static readonly int charLimit = 8;
         private static readonly int seed = 100;
+        private readonly IConfiguration _configuration;
+
+        public HomeController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
         //private IColorUtilsEndpoint myColorUtils = ColorUtilsEndpointFactory.GetEndpointAdapter(seed, "something");
         public ActionResult Index()
         {
@@ -48,7 +56,7 @@ namespace DriftRefactoringApp.Controllers
         public ActionResult AddRandomPerson()
         {
             // First generate a random [charLimit]-char name
-            StringUtils myStringUtils = new StringUtils();
+            StringUtils myStringUtils = new StringUtils(_configuration);
             String randPersonName = myStringUtils.RandomString(charLimit);
             // Next get the Last PersonId
             DBConnector myConnector = new DBConnector();
