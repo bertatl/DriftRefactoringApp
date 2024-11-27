@@ -59,7 +59,7 @@ namespace DriftRefactoringApp.Controllers
             StringUtils myStringUtils = new StringUtils(_configuration);
             String randPersonName = myStringUtils.RandomString(charLimit);
             // Next get the Last PersonId
-            DBConnector myConnector = new DBConnector();
+            DBConnector myConnector = new DBConnector(_configuration);
             int lastPersonId = myConnector.GetPersonCount();
             int newPersonId = lastPersonId + 1;
             // Next reverse the name to get user id
@@ -87,7 +87,7 @@ namespace DriftRefactoringApp.Controllers
             TempData["name"] = "Bill";
             Session["City"] = "city";
             // First get the Last PersonId
-            DBConnector myConnector = new DBConnector();
+            DBConnector myConnector = new DBConnector(_configuration);
             int lastPersonId = myConnector.GetPersonCount();
             // Next generate a random Id within this limit
             ColorUtils myColorUtils = new ColorUtils(seed);
