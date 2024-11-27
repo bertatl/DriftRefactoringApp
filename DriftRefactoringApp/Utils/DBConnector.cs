@@ -1,13 +1,21 @@
 using System;
-using System.Configuration;
-using System.Data.SqlClient;
 using DriftRefactoringApp.Models;
+using Microsoft.Data.SqlClient;
+using Microsoft.Extensions.Configuration;
+
 
 namespace DriftRefactoringApp.Utils
 {
     public class DBConnector
     {
-        private static string connStr = ConfigurationManager.ConnectionStrings["PersonDBConnectionString"].ConnectionString;
+        private readonly IConfiguration _configuration;
+        private readonly string connStr;
+
+        public DBConnector(IConfiguration configuration)
+        {
+            _configuration = configuration;
+            connStr = _configuration.GetConnectionString("PersonDBConnectionString");
+        }
         private Person createPerson(int personId, string personName, string personHandle)
         {
             Person myPerson = new Person();
@@ -21,7 +29,7 @@ namespace DriftRefactoringApp.Utils
         {
             try
             {
-                SqlConnection conn = new SqlConnection(connStr);
+using SqlConnection conn = new SqlConnection(connStr);
                 conn.Open();
                 string checkuser = "select count(*) from Users";
                 SqlCommand cmd = new SqlCommand(checkuser, conn);
@@ -42,7 +50,7 @@ namespace DriftRefactoringApp.Utils
         {
             try
             {
-                SqlConnection conn = new SqlConnection(connStr);
+using SqlConnection conn = new SqlConnection(connStr);
                 conn.Open();
                 string checkUser = "select Id, Name, UserHandle from Users where Id=" + personId;
                 SqlCommand cmd = new SqlCommand(checkUser, conn);
@@ -69,7 +77,7 @@ namespace DriftRefactoringApp.Utils
         {
             try
             {
-                SqlConnection conn = new SqlConnection(connStr);
+using SqlConnection conn = new SqlConnection(connStr);
                 conn.Open();
                 string insertQuery = "insert into Users(Id,Name,UserHandle) values (@pId,@pName,@pHandle)";
                 SqlCommand cmd = new SqlCommand(insertQuery, conn);
