@@ -4,6 +4,7 @@ using DriftRefactoringApp.Models;
 using SimpleDepProj;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
+using Microsoft.AspNetCore.Http;
 
 
 namespace DriftRefactoringApp.Controllers
@@ -85,7 +86,7 @@ namespace DriftRefactoringApp.Controllers
         public ActionResult GetRandomPerson()
         {
             TempData["name"] = "Bill";
-            Session["City"] = "city";
+            HttpContext.Session.SetString("City", "city");
             // First get the Last PersonId
             DBConnector myConnector = new DBConnector(_configuration);
             int lastPersonId = myConnector.GetPersonCount();
